@@ -2,7 +2,16 @@ import type { ElementInfo } from 'element-source'
 
 export interface PromptOptions {
   showLines?: boolean
-  /** Custom prompt template. Use {{ variable }} placeholders — see README for available variables. */
+  /**
+   * Custom prompt template using `{{ variable }}` placeholders.
+   *
+   * Available variables:
+   * - `{{ component }}` — component name (e.g. `ProductCard`)
+   * - `{{ file }}`      — source file path (e.g. `src/components/ProductCard.vue`), empty without vueGrabVitePlugin
+   * - `{{ line }}`      — line number (e.g. `42`), empty without vueGrabVitePlugin
+   * - `{{ html }}`      — HTML preview of the clicked element
+   * - `{{ stack }}`     — component stack, one frame per line
+   */
   prompt?: string
 }
 
