@@ -1,83 +1,26 @@
 {
-  "name": "vue-grab",
-  "version": "0.1.0",
-  "description": "Cmd+C to select any Vue component and copy an AI-ready prompt to your clipboard",
+  "name": "vue-grab-workspace",
+  "private": true,
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
-    "./nuxt": {
-      "types": "./dist/nuxt.d.ts",
-      "import": "./dist/nuxt.js",
-      "require": "./dist/nuxt.cjs"
-    },
-    "./vite": {
-      "types": "./dist/vite.d.ts",
-      "import": "./dist/vite.js",
-      "require": "./dist/vite.cjs"
-    }
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "vite build",
-    "dev": "vite build --watch",
-    "typecheck": "vue-tsc --noEmit",
-    "example": "npm run dev --prefix examples/vite-vue",
-    "example:nuxt": "npm run dev --prefix examples/nuxt4",
-    "lint": "eslint src/",
-    "lint:fix": "eslint src/ --fix",
-    "format": "prettier --write src/ examples/vite-vue/src/ examples/nuxt4/app/"
-  },
-  "keywords": [
-    "vue",
-    "nuxt",
-    "devtools",
-    "ai",
-    "component-inspector",
-    "copilot"
-  ],
-  "license": "MIT",
-  "peerDependencies": {
-    "vite-plugin-vue-inspector": "^5.0.0",
-    "vue": "^3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "nuxt": {
-      "optional": true
-    },
-    "vite-plugin-vue-inspector": {
-      "optional": true
-    }
-  },
-  "dependencies": {
-    "element-source": "^0.0.5"
+    "build": "pnpm -F vue-grab build",
+    "dev": "pnpm -F vue-grab dev",
+    "example": "pnpm -F example-vite-vue dev",
+    "example:nuxt": "pnpm -F example-nuxt4 dev",
+    "docs": "pnpm -F vue-grab-docs dev",
+    "lint": "eslint packages/vue-grab/src/",
+    "lint:fix": "eslint packages/vue-grab/src/ --fix",
+    "format": "prettier --write packages/ apps/",
+    "typecheck": "pnpm -F vue-grab typecheck"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@nuxt/kit": "^3.0.0",
-    "@types/node": "^20.0.0",
-    "@vitejs/plugin-vue": "^5.0.0",
     "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.9.0",
     "globals": "^17.6.0",
-    "nuxt": "^3.0.0",
     "prettier": "^3.8.3",
-    "typescript": "^5.0.0",
     "typescript-eslint": "^8.59.1",
-    "vite": "^6.0.0",
-    "vite-plugin-dts": "^4.0.0",
-    "vite-plugin-vue-inspector": "^5.4.0",
-    "vue": "^3.5.0",
-    "vue-eslint-parser": "^10.4.0",
-    "vue-tsc": "^2.0.0"
+    "vue-eslint-parser": "^10.4.0"
   }
 }

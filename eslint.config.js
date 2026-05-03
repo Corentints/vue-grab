@@ -7,7 +7,15 @@ import globals from 'globals'
 
 export default [
   {
-    ignores: ['dist/', 'examples/*/node_modules/', 'examples/*/dist/', 'examples/*/.nuxt/'],
+    ignores: [
+      'packages/*/dist/',
+      'packages/*/node_modules/',
+      'apps/*/node_modules/',
+      'apps/*/dist/',
+      'apps/*/.nuxt/',
+      'apps/docs/.vitepress/dist/',
+      'apps/docs/.vitepress/cache/',
+    ],
   },
   js.configs.recommended,
   ...ts.configs.recommended,
