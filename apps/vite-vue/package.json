@@ -1,5 +1,5 @@
 {
-  "name": "vue-grab-example",
+  "name": "example-vite-vue",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.0"
+    "vue": "^3.5.0",
+    "vue-grab": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",

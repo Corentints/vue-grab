@@ -1,5 +1,5 @@
 {
-  "name": "vue-grab-nuxt4-example",
+  "name": "example-nuxt4",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,8 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "nuxt": "^4.0.0"
+    "nuxt": "^4.0.0",
+    "vue-grab": "workspace:*"
   },
   "devDependencies": {
     "vite-plugin-vue-inspector": "^5.4.0"
